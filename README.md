@@ -50,7 +50,7 @@ FactorioHQ is a web application for managing Factorio game servers using Docker 
    ```bash
    docker compose up -d
    ```
-5. Access UI via 
+5. Access UI via browser
    ```bash 
     http:/<server ip adresss>:3000
    ```
