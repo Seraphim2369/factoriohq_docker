@@ -42,7 +42,7 @@ FactorioHQ is a web application for managing Factorio game servers using Docker 
    ```
 3. Build containers
    ```bash
-   cd factoriohq
+   cd factoriohq_docker
    docker compose build
    ```
 
