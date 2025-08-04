@@ -1,5 +1,5 @@
 # FactorioHQ
-
+This is a fork of FactorioHQ for docker deployment on the remote machine.
 FactorioHQ is a web application for managing Factorio game servers using Docker containers. It provides a user-friendly interface to create, configure, and manage multiple Factorio servers.
 
 ## Features
@@ -33,29 +33,26 @@ FactorioHQ is a web application for managing Factorio game servers using Docker 
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/behindcurtain3/factoriohq.git
+   git clone https://github.com/Seraphim2369/factoriohq_docker.git
+   ```
+2. Make a folder for server data and give permissions
+   ```bash 
+    sudo mkdir -p /factorio_data 
+    sudo chowm 845:845 /factorio_data
+   ```
+3. Build containers
+   ```bash
    cd factoriohq
+   docker compose build
    ```
 
-2. Install dependencies
+4. Start containers
    ```bash
-   bundle install
+   docker compose up -d
    ```
-
-3. Set up the database
-   ```bash
-   rails db:create db:migrate
-   ```
-
-4. Configure environment variables
-   ```bash
-   cp .env.example .env
-   ```
-   Edit the `.env` file and set `FACTORIO_DATA_PATH` to a directory where you want to store server files.
-
-5. Start the server
-   ```bash
-   rails server
+5. Access UI via 
+   ```bash 
+    http:/<server ip adresss>:3000
    ```
 
 ## Usage
